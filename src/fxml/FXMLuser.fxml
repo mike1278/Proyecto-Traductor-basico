@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="Frame" prefHeight="611.0" prefWidth="665.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.FXMLuserController">
+    <stylesheets>
+        <URL value="@/Style/Css_admin.css" />
+    </stylesheets>
+   <children>
+      <HBox layoutX="108.0" layoutY="187.0" prefHeight="58.0" styleClass="traductor">
+         <children>
+            <VBox>
+               <children>
+                  <JFXComboBox fx:id="Idioma_1" prefHeight="26.0" prefWidth="200.0" styleClass="C_box">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXComboBox>
+                  <JFXTextField fx:id="txt_1" onKeyReleased="#teclado" onKeyTyped="#letrastraductor" prefWidth="200.0" promptText="Palabra a traducir" unFocusColor="#2f2f2f">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+               </children>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </VBox>
+            <Separator minHeight="-Infinity" orientation="VERTICAL" prefHeight="58.0" />
+            <VBox>
+               <children>
+                  <JFXComboBox fx:id="Idioma_2" onMouseClicked="#borrar" prefHeight="26.0" prefWidth="200.0" styleClass="C_box">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXComboBox>
+                  <JFXTextField fx:id="txt_2" editable="false" focusColor="#ab0c0c" prefWidth="200.0" promptText="Resultado" unFocusColor="#2f2f2f">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <Text layoutX="304.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Traductor">
+         <font>
+            <Font name="Times New Roman Italic" size="15.0" />
+         </font>
+      </Text>
+      <TextField editable="false" layoutX="15.0" layoutY="6.0" prefHeight="28.0" prefWidth="238.0" style="-fx-background-color: transparent;" text="Pantalla usuario del traductor">
+         <font>
+            <Font name="Times New Roman Italic" size="15.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+      </TextField>
+      <HBox layoutX="160.0" layoutY="319.0" prefHeight="286.0" prefWidth="355.0" styleClass="traductor">
+         <children>
+            <VBox prefHeight="278.0" prefWidth="117.0">
+               <children>
+                  <Label text="Italiano">
+                     <font>
+                        <Font name="Times New Roman Italic" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ListView fx:id="ita" prefHeight="278.0" prefWidth="117.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ListView>
+               </children>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="5.0" />
+               </HBox.margin>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <VBox prefHeight="278.0" prefWidth="117.0">
+               <children>
+                  <Label text="Ingles">
+                     <font>
+                        <Font name="Times New Roman Italic" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="35.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ListView fx:id="eng" prefHeight="278.0" prefWidth="117.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ListView>
+               </children>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="5.0" />
+               </HBox.margin>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <VBox prefHeight="278.0" prefWidth="117.0">
+               <children>
+                  <Label text="Español">
+                     <font>
+                        <Font name="Times New Roman Italic" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ListView fx:id="esp" prefHeight="278.0" prefWidth="117.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ListView>
+               </children>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="5.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="596.0">
+         <children>
+            <Label fx:id="mins" styleClass="minimizar">
+               <graphic>
+                  <FontAwesomeIcon iconName="MINUS" size="1.5em" />
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" top="6.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="close" styleClass="Close">
+               <graphic>
+                  <FontAwesomeIcon iconName="CLOSE" size="1.5em" />
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+      </HBox>
+      <JFXButton layoutX="281.0" layoutY="288.0" onMouseClicked="#palabras" prefHeight="30.0" prefWidth="109.0" ripplerFill="BLACK" styleClass="ctp" text="Palabras" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman Italic" size="16.0" />
+         </font>
+      </JFXButton>
+      <HBox layoutX="35.0" layoutY="51.0">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" styleClass="inglesa">
+               <image>
+                  <Image url="@../Imagenes/inglesa.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" styleClass="espanol">
+               <image>
+                  <Image url="@../Imagenes/espanola.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" styleClass="italiano">
+               <image>
+                  <Image url="@../Imagenes/ita.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

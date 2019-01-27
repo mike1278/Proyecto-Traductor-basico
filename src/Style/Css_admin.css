@@ -1,0 +1,110 @@
+
+.Close{
+    -fx-background-color: transparent;
+}
+
+.Close:hover
+{
+    -fx-background-color:red;
+    -fx-background-radius: 50%;
+}
+
+.Close:hover FontAwesomeIcon{
+    -fx-fill: white;
+}
+
+.minimizar{
+    -fx-background-color: transparent;
+}
+
+.minimizar:hover
+{
+    -fx-background-color: #7a7a7a;
+    -fx-background-radius: 50%;
+}
+
+.minimizar:hover FontAwesomeIcon{
+    -fx-fill: white;
+}
+
+botton{
+    -fx-background-color: #c6c6c6;
+}
+
+botton:hover
+{
+    -fx-background-color: #aaaaaa;
+    -fx-text-fill: #fcfcfc;
+}
+
+.traductor{
+    -fx-border-color: #646464;
+}
+
+Separator:vertical .line
+{ 
+    -fx-border-style: solid;
+    -fx-border-color: black;
+    -fx-border-width: 0.2px;
+}
+
+Separator:horizontal .line
+{ 
+    -fx-border-style: solid;
+    -fx-border-color: black;
+    -fx-border-width: 0.2px;
+}
+
+JFXTextField{
+    -fx-border-color: #2f2f2f;
+}
+
+.btn_traductor
+{
+    -fx-border-color: #646464;
+    -fx-border-radius: 30%;
+}
+
+.C_box{
+    -fx-border-color: #646464;
+}
+
+.C_box .list-view
+{
+    -fx-control-inner-background: derive(-fx-base,80%);
+    -fx-base:#0099ff;
+    
+}
+
+.Radio{
+    -fx-selected-color : #6f00eb;
+}
+
+.ctp:hover
+{
+    -fx-background-color: #0099ff;
+    -fx-text-fill: white;
+    -fx-background-radius: 50%;
+}
+
+.bot:hover
+{
+    -fx-background-color: #979797;
+    -fx-text-fill:white;
+}
+
+.image-view:hover{
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+
+
+
+
+
+
+
+
+
+

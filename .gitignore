@@ -1,0 +1,10 @@
+/.idea/
+/out/
+/dist/
+/build/
+/dist/
+/nbproject/
+manifest.mf
+Proyecto_idiomas_mejorados.iml
+build.xml
+viejos_metodos.txt

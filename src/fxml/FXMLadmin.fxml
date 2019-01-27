@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="Frame" fx:id="Frame" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="1235.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.FXMLadminController">
+   <children>
+      <HBox layoutX="1165.0" layoutY="1.0">
+         <children>
+            <Label fx:id="mins" styleClass="minimizar">
+               <graphic>
+                  <FontAwesomeIcon iconName="MINUS" size="1.5em" />
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" top="6.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="close" styleClass="Close">
+               <graphic>
+                  <FontAwesomeIcon iconName="CLOSE" size="1.5em" />
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="5.0" layoutY="231.0">
+         <children>
+            <Separator orientation="VERTICAL" prefHeight="200.0">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Separator>
+            <VBox>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Italiano y Ingles" textAlignment="CENTER" wrappingWidth="128.31298828125">
+                     <font>
+                        <Font name="Times New Roman Italic" size="15.0" />
+                     </font>
+                  </Text>
+                  <ListView fx:id="ita_eng" prefHeight="278.0" prefWidth="119.0" />
+               </children>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Italiano y Español" textAlignment="CENTER" wrappingWidth="127.13671875">
+                     <font>
+                        <Font name="Times New Roman Italic" size="15.0" />
+                     </font>
+                  </Text>
+                  <ListView fx:id="ita_esp" prefHeight="278.0" prefWidth="119.0" />
+               </children>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ingles y Español" textAlignment="CENTER" wrappingWidth="127.13671875">
+                     <font>
+                        <Font name="Times New Roman Italic" size="15.0" />
+                     </font>
+                  </Text>
+                  <ListView fx:id="eng_esp" prefHeight="278.0" prefWidth="119.0" />
+               </children>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </VBox>
+            <Separator maxWidth="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefWidth="3.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin></Separator>
+            <VBox>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Italiano" textAlignment="CENTER" wrappingWidth="127.13671875">
+                     <font>
+                        <Font name="Times New Roman Italic" size="15.0" />
+                     </font>
+                  </Text>
+                  <ListView fx:id="ita" prefHeight="278.0" prefWidth="117.0" />
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" right="5.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="English" textAlignment="CENTER" wrappingWidth="127.13671875">
+                     <font>
+                        <Font name="Times New Roman Italic" size="15.0" />
+                     </font>
+                  </Text>
+                  <ListView fx:id="eng" prefHeight="278.0" prefWidth="117.0" />
+               </children>
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Español" textAlignment="CENTER" wrappingWidth="127.13671875">
+                     <font>
+                        <Font name="Times New Roman Italic" size="15.0" />
+                     </font>
+                  </Text>
+                  <ListView fx:id="esp" prefHeight="278.0" prefWidth="117.0" />
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Separator>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" />
+         </padding>
+      </HBox>
+      <JFXButton layoutX="160.0" layoutY="200.0" onMouseClicked="#conexiones" prefHeight="25.0" prefWidth="105.0" ripplerFill="BLACK" styleClass="ctp" text="Conexiones" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman Italic" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="581.0" layoutY="201.0" onMouseClicked="#palabras" prefHeight="30.0" prefWidth="109.0" ripplerFill="BLACK" styleClass="ctp" text="Palabras" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman Italic" size="16.0" />
+         </font>
+      </JFXButton>
+      <HBox layoutX="862.0" layoutY="235.0" prefHeight="58.0" styleClass="traductor">
+         <children>
+            <VBox prefHeight="124.0">
+               <children>
+                  <JFXComboBox fx:id="Idioma_1" prefHeight="26.0" prefWidth="150.0" styleClass="C_box">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXComboBox>
+                  <JFXTextField fx:id="txt_1" onKeyReleased="#teclado" onKeyTyped="#letrastraductor" prefWidth="150.0" promptText="Palabra a traducir" unFocusColor="#2f2f2f">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+               </children>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </VBox>
+            <Separator minHeight="-Infinity" orientation="VERTICAL" prefHeight="58.0" />
+            <VBox prefHeight="124.0">
+               <children>
+                  <JFXComboBox fx:id="Idioma_2" onMouseClicked="#borrar" prefHeight="26.0" prefWidth="150.0" styleClass="C_box">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXComboBox>
+                  <JFXTextField fx:id="txt_2" editable="false" focusColor="#ab0c0c" prefWidth="150.0" promptText="Resultado" unFocusColor="#2f2f2f">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <VBox layoutX="868.0" layoutY="371.0" prefHeight="152.0" prefWidth="342.0" styleClass="traductor">
+         <children>
+            <JFXComboBox fx:id="Conexion" prefWidth="150.0" styleClass="C_box">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="100.0" top="5.0" />
+               </VBox.margin>
+            </JFXComboBox>
+            <Separator prefWidth="200.0" />
+            <HBox>
+               <children>
+                  <Label prefHeight="17.0" prefWidth="117.0" text="Palabra Nº 1">
+                     <HBox.margin>
+                        <Insets left="15.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="118.0" text="Palabra Nº 2 ">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="92.0" text="Sinonimo">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="48.0" prefWidth="342.0">
+               <children>
+                  <JFXTextField fx:id="palabra1" onKeyTyped="#numeros" promptText="Palabra Nº 1">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="palabra2" focusColor="#b9b62a" onKeyTyped="#numeros" promptText="Palabra Nº 2">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <VBox>
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                     <children>
+                        <JFXRadioButton text="Si">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="Sin" />
+                           </toggleGroup>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Times New Roman Italic" size="14.0" />
+                           </font>
+                        </JFXRadioButton>
+                        <JFXRadioButton selected="true" styleClass="Radio" text="No" toggleGroup="$Sin">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Times New Roman Italic" size="14.0" />
+                           </font>
+                        </JFXRadioButton>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <JFXButton onMouseClicked="#add_conexion" prefHeight="25.0" prefWidth="348.0" styleClass="bot" text="Agregar conexion">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+      <Text layoutX="1008.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Traductor">
+         <font>
+            <Font name="Times New Roman Italic" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="982.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agregar Conexiones">
+         <font>
+            <Font name="Times New Roman Italic" size="15.0" />
+         </font>
+      </Text>
+      <JFXButton layoutX="401.0" layoutY="200.0" onMouseClicked="#tutto" styleClass="ctp" text="Tutto">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </JFXButton>
+      <HBox layoutX="14.0" layoutY="63.0" prefHeight="123.0" prefWidth="374.0">
+         <children>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="123.0" prefWidth="169.0" styleClass="traductor">
+               <children>
+                  <JFXComboBox fx:id="C_add" prefHeight="27.0" prefWidth="172.0" styleClass="C_box">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXComboBox>
+                  <Separator prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets bottom="2.0" top="2.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <JFXTextField fx:id="txt_add" focusColor="#5cbb5b" promptText="La palabra a agregar">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <Separator prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <JFXButton onMouseClicked="#add" prefHeight="25.0" prefWidth="168.0" styleClass="bot" text="Agregar">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Times New Roman Italic" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <Separator prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </Separator>
+               </children>
+               <HBox.margin>
+                  <Insets left="5.0" right="15.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="123.0" prefWidth="166.0" styleClass="traductor">
+               <children>
+                  <JFXComboBox fx:id="C_eli" prefHeight="27.0" prefWidth="172.0" styleClass="C_box">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXComboBox>
+                  <Separator prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets bottom="2.0" top="2.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <JFXTextField fx:id="txt_eli" promptText="La palabra a eliminar">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <Separator prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <JFXButton onMouseClicked="#elimina" prefHeight="25.0" prefWidth="168.0" styleClass="bot" text="Eliminar">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Times New Roman Italic" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <Separator prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </Separator>
+               </children>
+               <HBox.margin>
+                  <Insets left="15.0" right="5.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <Label layoutX="50.0" layoutY="40.0" text="Agregar Palabra">
+         <font>
+            <Font name="Times New Roman Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="246.0" layoutY="41.0" text="Eliminar Palabra">
+         <font>
+            <Font name="Times New Roman Italic" size="15.0" />
+         </font>
+      </Label>
+      <HBox layoutX="439.0" layoutY="55.0" prefHeight="111.0" prefWidth="653.0">
+         <children>
+            <ImageView fx:id="img_ing" fitHeight="130.0" fitWidth="250.0" pickOnBounds="true" styleClass="inglesa">
+               <image>
+                  <Image url="@../Imagenes/inglesa.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img_esp" fitHeight="130.0" fitWidth="250.0" pickOnBounds="true" styleClass="espanol">
+               <image>
+                  <Image url="@../Imagenes/espanola.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img_ita" fitHeight="130.0" fitWidth="250.0" pickOnBounds="true" styleClass="italiano">
+               <image>
+                  <Image url="@../Imagenes/ita.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <TextField editable="false" layoutX="13.0" layoutY="5.0" prefHeight="28.0" prefWidth="238.0" style="-fx-background-color: transparent;" text="Pantalla administador del traductor">
+         <font>
+            <Font name="Times New Roman Italic" size="15.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+      </TextField>
+   </children>
+</AnchorPane>
